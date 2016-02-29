@@ -1,0 +1,129 @@
+---
+layout: default
+---
+
+<div class="home">
+  <section style="margin-top: 20px;">
+    <div class="section__content">
+      <h4>{{ site.data.data.description }}</h4>
+    </div>
+  </section>
+
+  <section class="skills">
+    <h3>Skills</h3>
+    <h4>Things I learned throughout the years.</h4>
+
+    <div class="section__content">
+      <div class="row">
+        {% for row in site.data.skills %}
+          <div class="col-xs-12 col-sm-3">
+            <h4 class="row-title">{{ row.name }}</h4>
+
+            {% for skill in row.skills %}
+              <h4>{{ skill }}</h4>
+            {% endfor %}
+          </div>
+        {% endfor %}
+      </div>
+
+      <div class="row extra">
+        <div class="col-xs-12">
+          <h4>Also, I have an interest in: {{ site.data.skills_extra.content }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h3>Achievements</h3>
+    <h4>Contests I have taken part in.</h4>
+
+    <div class="section__content row">
+      {% for item in site.data.achievements %}
+        {% include contest.html item=item %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <section>
+    <h3>Projects</h3>
+    <h4>I love creating things, here are a few of my side projects:</h4>
+
+    <div class="section__content row">
+      {% for item in site.data.projects %}
+        {% include item.html item=item %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- <section>
+    <h2 class="section__title"><span>Posts</span></h2>
+
+    <div class="section__content">
+      <div class="post-container">
+        {% for post in site.posts %}
+          <div class="post">
+            <div class="post__title">
+              <h3>{{ post.title }}</h3>
+            </div>
+
+            <div class="post__excerpt">
+              <h4>{{ post.content | strip_html | truncatewords: 50 }}</h4>
+            </div>
+
+            <div class="post__actions">
+              <div class="post__actions__action">
+                <a href="{{ post.url }}">
+                  <span>Continue reading</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="post__meta">
+              <span>{{ post.date | date: "%b %-d, %Y" }}</span>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section> -->
+
+  <section class="companies">
+    <h3>I have worked with these great companies</h3>
+
+    <div class="section__content">
+      {% for company in site.data.companies %}
+        <img src="{{ company.image }}" style="height: {{ company.height }}px;" />
+      {% endfor %}
+    </div>
+  </section>
+
+  <section>
+    <h3>Contact</h3>
+
+    <div class="section__content">
+      <h4>I would be more than glad to have a chat with you</h4>
+
+      {% for item in site.data.contact %}
+        <div class="contactmethod">
+          <a href="{{ item.href }}" target="_blank">
+            <i class="{{ item.icon }}"></i>
+          </a>
+        </div>
+      {% endfor %}
+
+      <div class="clearfix"></div>
+    </div>
+  </section>
+
+  <section class="freetime">
+    <h3>In my free time</h3>
+    <h4>Sometimes I spend my time..</h4>
+
+    <div class="section__content row">
+      {% for item in site.data.freetime %}
+        {% include item.html item=item %}
+      {% endfor %}
+    </div>
+  </section>
+</div>

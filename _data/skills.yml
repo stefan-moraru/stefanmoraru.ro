@@ -1,0 +1,11 @@
+- name: Front end
+  skills: [ Javascript, "React, Flux", Angular, SASS/LESS, "Gulp, Grunt, Webpack, Karma, Jasmine" ]
+
+- name: Back end
+  skills: [ NodeJS, Sails, PHP, Symfony ]
+
+- name: Other
+  skills: [ "Linux, Bash", Git, ActionScript, "SQL/NoSQL dbs, Firebase", Solid presentation skills, TDD ]
+
+- name: Mobile
+  skills: [ Android ]

@@ -1,0 +1,23 @@
+- name: Learn
+  image: assets/freetime-dance.gif
+  href: https://github.com/stefan-moraru/learn
+
+- name: Literalmente
+  image: assets/freetime-skate.gif
+  href: http://www.literalmente.ro
+
+- name: Literalmente
+  image: assets/freetime-fun.gif
+  href: http://www.literalmente.ro
+
+- name: Literalmente
+  image: assets/freetime-presentations.jpg
+  href: http://www.literalmente.ro
+
+- name: Literalmente
+  image: assets/freetime-travel.gif
+  href: http://www.literalmente.ro
+
+- name: Literalmente
+  image: assets/freetime-ski.jpg
+  href: http://www.literalmente.ro

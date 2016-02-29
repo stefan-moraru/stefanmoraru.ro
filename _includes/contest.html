@@ -1,0 +1,28 @@
+<div class="col-xs-12 contest">
+
+  <h4>
+    <div class="award">
+      <span class="place place-{{item.place}}">
+      <i class="fa fa-trophy"></i>
+
+      <span>
+        {{ item.place }}{% if item.place == 1 %}{{'st'}}
+        {% elsif item.place == 2 %}{{ 'nd' }}
+        {% elsif item.place == 3 %}{{ 'rd' }}
+        {% endif %}
+        place
+      </span>
+      </span>
+
+      <span>at</span>
+
+      <span>{{ item.contest }}</span>
+      <span>({{ item.date | date: '%Y' }})</span>
+    </div>
+
+    <div class="description">
+      <span>{{ item.description }}</span>
+    </div>
+  </h4>
+
+</div>

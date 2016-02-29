@@ -1,0 +1,7 @@
+markdown: kramdown
+permalink: /blog/:categories/:title
+title: Stefan Moraru
+email: stefan@stefanmoraru.ro
+description: Fancy stuff
+baseurl: ""
+url: "http://stefanmoraru.ro"
