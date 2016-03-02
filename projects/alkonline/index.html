@@ -1,0 +1,178 @@
+<html>
+  <head>
+    <style>
+      body {
+        padding: 0px;
+        margin: 0px;
+
+        font-family: 'Monaco';
+      }
+
+      .editor-container {
+        position: relative;
+      }
+
+      .editor-container .title {
+        color: white;
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        z-index: 1;
+        font-size: 12px;
+        opacity: 0.5;
+      }
+
+      .editor-container .title h4 {
+        margin: 0px;
+      }
+
+      .editor {
+        width: 100%;
+        position: relative;
+        z-index: 0;
+      }
+
+      #code {
+        height: 50%;
+      }
+
+      #params {
+        height: 20%;
+      }
+
+      #result {
+        height: 30%;
+      }
+
+      .loader {
+        width: 30px;
+      }
+
+      #run .loader {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -15px;
+        margin-top: -15px;
+      }
+
+      .loading {
+      }
+
+      #run {
+        color: #ecf0f1;
+        box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+        font-weight: bold;
+        background-color: #2ecc71;
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        cursor: pointer;
+        width: 70px;
+        height: 20px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class='editor-container'>
+      <div class='title'><h4>Codul tau</h4></div>
+
+      <div class='editor' id='code'></div>
+    </div>
+
+    <div class='editor-container'>
+      <div class='title'><h4>Parameterii</h4></div>
+
+      <div class='editor' id='params'></div>
+    </div>
+
+    <div class='editor-container'>
+      <div class='title'><h4>Rezultat</h4></div>
+
+      <div class='editor' id='result'></div>
+    </div>
+
+    <div id='run'>
+      <img class='loading loader' src='http://i.imgur.com/PYS1ZIg.gif' hidden />
+      <span class='notloading'>Ruleaza</span>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/superagent/1.2.0/superagent.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/ace.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/theme-tomorrow_night.js"></script>
+
+    <script>
+      var editorCode = ace.edit('code');
+
+      editorCode.setTheme('ace/theme/tomorrow_night');
+      editorCode.getSession().setMode('ace/mode/javascript');
+      editorCode.renderer.setShowGutter(false);
+      editorCode.renderer.setScrollMargin(40);
+      editorCode.renderer.setPadding(20);
+      editorCode.setShowPrintMargin(false);
+      editorCode.setHighlightActiveLine(false);
+
+      var editorParams = ace.edit('params');
+
+      editorParams.setTheme('ace/theme/tomorrow_night');
+      editorParams.getSession().setMode('ace/mode/javascript');
+      editorParams.renderer.setShowGutter(false);
+      editorParams.renderer.setScrollMargin(40);
+      editorParams.renderer.setPadding(20);
+      editorParams.setShowPrintMargin(false);
+      editorParams.setHighlightActiveLine(false);
+
+      var editorResult = ace.edit('result');
+
+      editorResult.setTheme('ace/theme/tomorrow_night');
+      editorResult.getSession().setMode('ace/mode/javascript');
+      editorResult.renderer.setShowGutter(false);
+      editorResult.renderer.setScrollMargin(40);
+      editorResult.renderer.setPadding(20);
+      editorResult.setReadOnly(true);
+      editorResult.setShowPrintMargin(false);
+      editorResult.setHighlightActiveLine(false);
+      editorResult.renderer.$cursorLayer.element.style.opacity=0
+    </script>
+
+    <script>
+
+      document.getElementById('run').addEventListener('click', run);
+
+      function run() {
+
+        var url = 'https://alkonline.herokuapp.com/api/v1/alk/run';
+
+        var code = editorCode.getValue();
+        var params = editorParams.getValue();
+
+        if (code.length < 10) {
+          return;
+        }
+
+        document.getElementsByClassName('loading')[0].hidden = false;
+        document.getElementsByClassName('notloading')[0].hidden = true;
+
+        var body = {
+          code: code,
+          params: params || '.Map',
+        };
+
+        superagent
+        .post(url)
+        .send(body)
+        .end(function(err, res) {
+          document.getElementsByClassName('loading')[0].hidden = true;
+          document.getElementsByClassName('notloading')[0].hidden = false;
+
+          editorResult.setValue(res.text, 1);
+        });
+
+      }
+
+    </script>
+
+  </body>
+</html>
