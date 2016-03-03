@@ -3,14 +3,15 @@ const API_URL = 'https://alkonline.herokuapp.com/api/v1/alk/run';
 const configureEditor = (editor, readonly = false) => {
     editor.setTheme('ace/theme/tomorrow_night');
     editor.getSession().setMode('ace/mode/javascript');
-    editor.renderer.setShowGutter(false);
-    editor.renderer.setScrollMargin(40);
-    editor.renderer.setPadding(20);
+    editor.renderer.setScrollMargin(10);
+    editor.renderer.setPadding(15);
     editor.setShowPrintMargin(false);
     editor.setHighlightActiveLine(false);
+    editor.session.setUseWorker(false); //Disable warnings
 
     if (readonly) {
       editor.setReadOnly(true);
+      editor.renderer.setShowGutter(false);
       editor.renderer.$cursorLayer.element.style.opacity=0
     }
 
@@ -19,7 +20,7 @@ const configureEditor = (editor, readonly = false) => {
 
 const editorCode = configureEditor(ace.edit('code'));
 const editorParams = configureEditor(ace.edit('params'))
-const editorResult = configureEditor(ace.edit('result'));
+const editorResult = configureEditor(ace.edit('result'), true);
 
 const getData = (url, body) => {
   return new Promise((res, rej) => {
@@ -79,5 +80,19 @@ const run = () => {
   .then(hideLoader);
 
 };
+
+function loadExample (example) {
+  const examples = {
+    'bubblesort': {
+      'code': 'hi',
+      'params': 'bau'
+    }
+  };
+
+  console.log(examples[example]);
+
+  editorCode.setValue(examples[example].code, 1);
+
+}
 
 document.getElementById('run').addEventListener('click', run);

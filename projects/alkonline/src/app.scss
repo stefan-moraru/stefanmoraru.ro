@@ -1,4 +1,47 @@
 body {
+  padding-top: 60px;
+  padding-bottom: 100px;
+  padding-right: 0px !important;
+}
+
+.editor {
+  &#code {
+    height: 60vh;
+    min-height: 500px;
+  }
+
+  &#params {
+    min-height: 50px;
+  }
+
+  &#result {
+    min-height: 200px;
+  }
+}
+
+.navbar .btn-group {
+  padding-top: 3px;
+}
+
+.navbar .form-inline {
+  margin-bottom: 0px;
+}
+
+.title {
+  margin-top: 10px;
+}
+
+.fa-spinner {
+  animation: spin 2s linear infinite;
+
+  @keyframes spin {
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+}
+
+/*body {
   padding: 0px;
   margin: 0px;
   font-family: 'Monaco';
@@ -20,12 +63,6 @@ body {
       margin: 0px;
     }
   }
-}
-
-.editor {
-  width: 100%;
-  position: relative;
-  z-index: 0;
 }
 
 #code {
@@ -77,4 +114,4 @@ body {
       color: white;
     }
   }
-}
+} */

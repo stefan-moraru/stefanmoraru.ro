@@ -14,43 +14,87 @@
   </head>
 
   <body>
-    <div class='container-fluid'>
-      <nav class="navbar navbar-fixed-bottom navbar-dark bg-inverse">
+    <div class='container'>
+      <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
         <a class="navbar-brand" href="#">AlkOnline</a>
 
         <form class="form-inline pull-right">
           <div class="btn-group" role="group" aria-label="Commands">
-            <button type="button" class="btn btn-secondary bg-success"><i class='fa fa-play'></i></button>
+            <button type="button" class="btn btn-secondary bg-success" id="run">
+              <i class='fa fa-play notloading'></i>
+              <i class='fa fa-spinner loading' hidden></i>
+            </button>
             <button type="button" class="btn btn-secondary bg-warning"><i class='fa fa-floppy-o'></i></button>
             <button type="button" class="btn btn-secondary bg-info"><i class='fa fa-download'></i></button>
           </div>
         </form>
       </nav>
+
+      <div class='row title'>
+        <div class='col-xs-12'>
+          <h5>Codul tau</h5>
+          <h6>Scrie aici codul tau. Sau <a href="#" data-toggle="modal" data-target="#myModal">incarca un exemplu</a>.</h6>
+
+        </div>
+      </div>
+
+      <div class='row'>
+        <div class='col-xs-12'>
+          <div class='editor' id='code'></div>
+        </div>
+      </div>
+
+      <div class='row title'>
+        <div class='col-xs-12'>
+          <h5>Parameterii</h5>
+        </div>
+      </div>
+
+      <div class='row'>
+        <div class='col-xs-12'>
+          <div class='editor' id='params'></div>
+        </div>
+      </div>
+
+      <div class='row title'>
+        <div class='col-xs-12'>
+          <h5>Rezultat</h5>
+        </div>
+      </div>
+
+      <div class='row'>
+        <div class='col-xs-12'>
+          <div class='editor' id='result'></div>
+        </div>
+      </div>
     </div>
 
-    <div class='editor-container'>
-      <div class='title'><h4>Codul tau</h4></div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title">Exemple</h4>
+        </div>
+        <div class="modal-body">
+          <h6>Incearca unul din exemplele de mai jos</h6>
 
-      <div class='editor' id='code'></div>
+          <ul class="list-group">
+            <li class="list-group-item" onclick="loadExample('bubblesort');">Bubble Sort</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+          </ul>
+        </div>
+        </div>
+      </div>
     </div>
 
-    <div class='editor-container'>
-      <div class='title'><h4>Parameterii</h4></div>
-
-      <div class='editor' id='params'></div>
-    </div>
-
-    <div class='editor-container'>
-      <div class='title'><h4>Rezultat</h4></div>
-
-      <div class='editor' id='result'></div>
-    </div>
-
-    <div id='run'>
-      <img class='loading loader' src='http://i.imgur.com/PYS1ZIg.gif' hidden />
-      <span class='notloading'>Ruleaza</span>
-    </div>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/superagent/1.2.0/superagent.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/ace.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/theme-tomorrow_night.js'></script>
