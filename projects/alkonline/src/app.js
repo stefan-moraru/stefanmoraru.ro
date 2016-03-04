@@ -27,11 +27,11 @@ const getData = (url, body) => {
     superagent
     .post(url)
     .send(body)
-    .end((err, res) => {
+    .end((err, response) => {
       if (err) {
         rej(err);
       } else {
-        res(res);
+        res(response);
       }
     });
   });
@@ -81,18 +81,88 @@ const run = () => {
 
 };
 
-function loadExample (example) {
-  const examples = {
-    'bubblesort': {
-      'code': 'hi',
-      'params': 'bau'
-    }
-  };
+document.getElementById('run').addEventListener('click', run);
+document.getElementById('save').addEventListener('click', saveCode);
 
-  console.log(examples[example]);
+function saveCode() {
+  const code = editorCode.getValue();
+
+  var blob = new Blob([code], { type: 'text/plain;charset=utf-8' });
+
+  saveAs(blob, window.prompt('Numele fisierului', '') + '.alk');
+}
+
+function loadExample (example) {
+const examples = {
+'bubblesort': {
+  'code': 'hi',
+  'params': 'bau'
+},
+'gcd': {
+'code': `gcd(a, b)
+{
+  while (a != b) {
+    if (a > b)  a = a - b;
+    if (b > a) b = b - a;
+  }
+
+  return a;
+}
+
+x = gcd(a, b);`,
+'params': `a |-> 200 b |-> 100`
+},
+'dfs': {
+'code': `i = 0;
+  
+while (i < D.n) {
+  
+  p[i] = (D.a)[i];
+  
+  S[i] = 0;
+  
+  i = i + 1;
+  
+}
+
+SB = < i0 >;
+
+S[i0] = 1;
+
+while (SB.size() > 0) {
+
+  i = SB.topFront();
+
+  if (p[i].size() == 0) {
+
+    SB.popFront();
+
+  }
+
+  else {
+
+    j = p[i].topFront();
+
+    p[i].popFront();
+
+    if (S[j] == 0) {
+
+    S[j] = 1;
+
+    SB.pushFront(j);
+
+    }
+
+  }
+}
+
+ }`,
+'params': `D |-> { n -> 3 a -> [ < 1, 2 >, < 2, 0 >, < 0 > ] } i0 |-> 1`
+}
+};
 
   editorCode.setValue(examples[example].code, 1);
+  editorParams.setValue(examples[example].params, 1);
 
 }
 
-document.getElementById('run').addEventListener('click', run);
