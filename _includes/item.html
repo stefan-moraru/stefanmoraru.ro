@@ -1,7 +1,11 @@
 <div class="col-sm-4" style="padding: 15px;">
+  {% if item.href %}
   <a href="{{ item.href }}" target="_blank">
+  {% endif %}
     <div class="project" style="background-image: url('{{ item.image }}')">
       <h4>{{ item.name }}</h4>
     </div>
+  {% if item.href %}
   </a>
+  {% endif %}
 </div>
