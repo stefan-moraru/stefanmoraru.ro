@@ -93,7 +93,9 @@ layout: default
 
     <div class="section__content">
       {% for company in site.data.companies %}
-        <img src="{{ company.image }}" style="height: {{ company.height }}px;" />
+        <a href="{{ company.href }}" target="_blank">
+          <img src="{{ company.image }}" style="height: {{ company.height }}px;" />
+        </a>
       {% endfor %}
     </div>
   </section>

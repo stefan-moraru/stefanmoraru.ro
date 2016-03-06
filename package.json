@@ -1,0 +1,27 @@
+{
+  "name": "stefanmoraru.ro",
+  "version": "1.0.0",
+  "description": "The source of stefanmoraru.ro",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf _site & jekyll build && npm run build-projects",
+    "build-projects": "rm -rf projects && mkdir -p projects && npm run build-project-alkonline",
+    "build-project-alkonline": "cd projects && git clone https://github.com/stefan-moraru/alkonline-web.git alkonline && cd alkonline && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefan-moraru/stefanmoraru.ro.git"
+  },
+  "keywords": [
+    "stefan",
+    "moraru",
+    "stefanmoraru.ro"
+  ],
+  "author": "Stefan Moraru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stefan-moraru/stefanmoraru.ro/issues"
+  },
+  "homepage": "https://github.com/stefan-moraru/stefanmoraru.ro#readme"
+}
