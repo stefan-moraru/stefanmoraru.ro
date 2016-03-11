@@ -1,3 +1,7 @@
+- name: Journal
+  image: assets/projects-journal.png
+  href: http://stefanmoraru.ro/projects/journal
+
 - name: Learn
   image: assets/projects-learn.png
   href: https://github.com/stefan-moraru/learn
