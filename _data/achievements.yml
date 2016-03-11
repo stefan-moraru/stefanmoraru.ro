@@ -1,20 +1,17 @@
 - name: Code4Iasi Hackathon
   contest: Code4Iasi Hackathon
   date: 01-11-2015
-  image: https://scontent.fomr1-1.fna.fbcdn.net/hphotos-xap1/t31.0-8/12232963_931923060178168_4141106828211234264_o.jpg
   place: 1
   description: Developed 'IasiAjuta', a platform for volunteering.
 
 - name: Won the county phase of Infoeducatie
   contest: County phase of Infoeducatie
   date: 01-06-2015
-  image: http://www.qbitvortex.com/images/pages/webdevelopment.jpg
   place: 1
   description: Developed 'PSM', an online pseudocode interpreter, together with an evaluation platform.
 
 - name: Second place at Empowersoft's contest
   date: 01-06-2015
-  image: http://i.imgur.com/AzBRVUa.png
   href: https://www.youtube.com/watch?v=a_GYS9LiOBA
   contest: Empowersoft
   place: 2
@@ -22,42 +19,36 @@
 
 - name: Won IT Marathon
   date: 01-05-2015
-  image: https://scontent.fomr1-1.fna.fbcdn.net/hphotos-xfl1/t31.0-8/11269693_1597328657214907_2940346205275141150_o.jpg
   contest: IT Marathon
   place: 1
   description: Together with Alexandru Rosianu, developed an online gifting system.
 
 - name: Won a Hackathon
   date: 01-04-2015
-  image: https://scontent.fomr1-1.fna.fbcdn.net/hphotos-xaf1/t31.0-8/10353328_10152840325949227_8940509009193016952_o.jpg
   contest: Emil Racovita Hackathon
   place: 1
   description: Created 'ICY', an online calendar based on events
 
 - name: Won IT Marathon
   date: 01-05-2014
-  image: https://scontent.fomr1-1.fna.fbcdn.net/hphotos-xtp1/v/t1.0-9/11054357_1569546606659779_5526161233244210087_n.jpg?oh=dc1a3fbee2d0ef551521a52d568c6218&oe=572F3B2B
   contest: IT Marathon
   place: 1
   description: Developed an online banking platform that could also handle accounting.
 
 - name: Won Mozilla Winter Web Workshop
   date: 01-12-2013
-  image: http://old.vi.to/workshop/20100104/header_winter09.jpg
   contest: Winter Web Workshop
   place: 1
   description: Did an all-around cooking platform, that included recipes, timers, cooking achievements.
 
 - name: Won IT Marathon
   date: 01-05-2013
-  image: https://scontent.fomr1-1.fna.fbcdn.net/hphotos-xfa1/t31.0-8/s960x960/10953370_1569546616659778_102032759924628397_o.jpg
   contest: IT Marathon
   place: 1
   description: Created a file hosting service similar to Dropbox
 
 - name: Third place PROSOFT@NT
   date: 01-02-2013
-  image: http://www.qbitvortex.com/images/pages/webdevelopment.jpg
   contest: PROSOFT@NT
   place: 3
   description: Developed an online contest platform for high schools

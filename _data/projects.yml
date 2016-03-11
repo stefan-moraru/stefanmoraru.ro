@@ -1,7 +1,11 @@
 - name: Learn
-  image: http://media.boingboing.net/wp-content/uploads/2015/05/lean.jpg
+  image: assets/projects-learn.png
   href: https://github.com/stefan-moraru/learn
 
 - name: Literalmente
-  image: http://literalmente.ro/images/background.jpg
+  image: assets/projects-literalmente.png
   href: http://www.literalmente.ro
+
+- name: Alk online
+  image: assets/projects-alkonline.png
+  href: http://stefanmoraru.ro/projects/alkonline
