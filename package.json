@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf _site & jekyll build && npm run build-projects",
-    "build-projects": "rm -rf projects && mkdir -p projects && npm run build-project-alkonline",
-    "build-project-alkonline": "cd projects && git clone https://github.com/stefan-moraru/alkonline-web.git alkonline && cd alkonline && npm run build"
+    "build-projects": "rm -rf projects && mkdir -p projects && npm run build-project-alkonline & npm run build-project-journal",
+    "build-project-alkonline": "cd projects && git clone https://github.com/stefan-moraru/alkonline-web.git alkonline-temp && cd alkonline-temp && npm run build && mv dist ../alkonline && cd .. && rm -rf alkonline-temp",
+		"build-project-journal": "cd projects && git clone https://github.com/stefan-moraru/jorunal.git journal-temp && cd journal-temp && npm run build && mv dist ../journal && cd .. && rm -rf journal-temp"
   },
   "repository": {
     "type": "git",
