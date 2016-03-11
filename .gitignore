@@ -2,3 +2,6 @@ _site
 .sass-cache
 *swp
 *npm-debug*
+
+# The projects will be build automatically
+projects/
