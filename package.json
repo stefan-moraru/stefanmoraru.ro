@@ -7,8 +7,8 @@
     "build": "rm -rf _site && npm run build-projects && jekyll build",
     "build-projects": "rm -rf projects && mkdir -p projects && npm run build-project-alkonline && npm run build-project-journal",
     "build-project-alkonline": "cd projects && git clone https://github.com/stefan-moraru/alkonline-web.git alkonline-temp && cd alkonline-temp && npm run build && mv dist ../alkonline && cd .. && rm -rf alkonline-temp",
-		"build-project-journal": "cd projects && git clone https://github.com/stefan-moraru/jorunal.git journal-temp && cd journal-temp && npm run build && mv dist ../journal && cd .. && rm -rf journal-temp",
-		"deploy": "./deploy.sh"
+    "build-project-journal": "cd projects && git clone https://github.com/stefan-moraru/jorunal.git journal-temp && cd journal-temp && npm run build && mv dist ../journal && cd .. && rm -rf journal-temp",
+    "deploy": "./deploy.sh"
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/stefan-moraru/stefanmoraru.ro/issues"
   },
-  "homepage": "https://github.com/stefan-moraru/stefanmoraru.ro#readme"
+  "homepage": "https://github.com/stefan-moraru/stefanmoraru.ro#readme",
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.2"
+  }
 }
