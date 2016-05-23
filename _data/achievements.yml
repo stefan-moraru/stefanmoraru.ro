@@ -1,3 +1,21 @@
+- name: Won IT Marathon
+  contest: IT Marathon
+  date: 22-05-2016
+  place: 1
+  description: Created a real time ecosystem simulator. Event driven, it could handle large scales of data.
+
+- name: FIICode
+  contest: FIICode
+  date: 08-05-2016
+  place: 1
+  description: The application developed for this contest serves as a centered hub of information around time management. We provide the user with the right tools for sppliting the current day into sub-tasks and for micromanaging all of their goals.
+
+- name: FIIPractic Hackathon
+  contest: FIIPractic Hackathon
+  date: 17-04-2016
+  place: 1
+  description: Working with Emilian Damian, developed an online knowledge sharing platform that improved the way students learned with the help of gamification. It also included ways in which users could give back to the community, by solving environmental issues, thus gaining access to learning materials.
+
 - name: Code4Iasi Hackathon
   contest: Code4Iasi Hackathon
   date: 01-11-2015
