@@ -1,5 +1,23 @@
 .home {
 
+  .speaking {
+    margin-top: 20px;
+
+    .title {
+      margin-top: 12px;
+      margin-bottom: 6px;
+    }
+
+    .image {
+      height: 30px;
+      margin-bottom: 5px;
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+
   .companies {
     .section__content {
       margin-top: 20px;

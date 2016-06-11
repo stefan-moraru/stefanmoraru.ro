@@ -56,6 +56,17 @@ layout: default
     </div>
   </section>
 
+  <section>
+    <h3>Public speaking</h3>
+    <h4>Inspiring other people to be great is one of my passions, and that is reflected in my eagerness to do public speaking.</h4>
+
+    <div class="section__content row">
+      {% for item in site.data.speaking %}
+        {% include speaking.html item=item %}
+      {% endfor %}
+    </div>
+  </section>
+
   <!-- <section>
     <h2 class="section__title"><span>Posts</span></h2>
 
