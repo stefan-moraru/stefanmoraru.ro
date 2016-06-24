@@ -6,6 +6,36 @@
     position: relative;
 }
 
+/*
+  <div class="container">
+
+    <a class="site-title" href="{{ site.baseurl }}/">
+      <div class="image">
+        <img src="assets/me.jpg" />
+      </div>
+
+      <div class="text">
+      */
+
+@media (max-width: 360px) {
+  .site-header {
+    .container {
+      text-align: center;
+      .site-title {
+        width: 100%;
+        text-align: center;
+        .text {
+          float: none;
+        }
+
+        .image {
+          float: none;
+        }
+      }
+    }
+  }
+}
+
 .site-title {
     font-size: 35px;
     letter-spacing: -1px;

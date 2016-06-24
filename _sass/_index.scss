@@ -28,6 +28,21 @@
     }
   }
 
+  @media (max-width: 560px) {
+    .companies {
+      a {
+        width: 100%;
+      }
+
+      a img {
+        width: 60%;
+        height: auto !important;
+        margin-bottom: 40px;
+      }
+    }
+
+  }
+
   .skills {
     .row-title {
       color: $theme-main-color;
