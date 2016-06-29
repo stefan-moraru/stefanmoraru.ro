@@ -1,11 +1,15 @@
 - icon: fa fa-envelope
   href: mailto:stefan@stefanmoraru.ro
+  title: Email
 
 - icon: fa fa-linkedin-square
   href: https://ro.linkedin.com/in/stefanmoraru
+  title: LinkedIN
 
 - icon: fa fa-stack-overflow
   href: http://stackoverflow.com/users/2445124/stefan-moraru
+  title: StackOverflow
 
 - icon: fa fa-github-square
   href: https://github.com/stefan-moraru
+  title: GitHub

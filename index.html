@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="home">
-  <section style="margin-top: 20px;">
+  <section style="margin-top: 15px;">
     <div class="section__content">
       <h3>{{ site.data.data.description }}</h3>
     </div>
@@ -122,7 +122,10 @@ layout: default
       {% for item in site.data.contact %}
         <div class="contactmethod">
           <a href="{{ item.href }}" target="_blank">
-            <i class="{{ item.icon }}"></i>
+            <div class="contactmethod__icon">
+              <i class="{{ item.icon }} fa-fw"></i>
+            </div>
+            <span class="contactmethod__title">{{ item.title }}</span>
           </a>
         </div>
       {% endfor %}
