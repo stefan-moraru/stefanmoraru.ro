@@ -5,13 +5,12 @@ layout: default
 <div class="home">
   <section style="margin-top: 15px;">
     <div class="section__content">
-      <h3>{{ site.data.data.description }}</h3>
+      <h3 style="font-weight: 300;">{{ site.data.data.description }}</h3>
     </div>
   </section>
 
   <section class="skills">
-    <h3>Skills</h3>
-    <h4>Things I learned throughout the years.</h4>
+    <h3 class="section__title">Knowledge I gained throughout the years</h3>
 
     <div class="section__content">
       <div class="row">
@@ -28,15 +27,14 @@ layout: default
 
       <div class="row extra">
         <div class="col-xs-12">
-          <h4>Also, I have an interest in: {{ site.data.skills_extra.content }}</span>
+          <h4>Also, I have an interest in {{ site.data.skills_extra.content }}.</span>
         </div>
       </div>
     </div>
   </section>
 
   <section>
-    <h3>Achievements</h3>
-    <h4>Contests I have taken part in.</h4>
+    <h3 class="section__title">Moments when my talent shined</h3>
 
     <div class="section__content row">
       {% for item in site.data.achievements %}
@@ -59,8 +57,7 @@ layout: default
   -->
 
   <section>
-    <h3>Public speaking</h3>
-    <h4>Inspiring other people to be great is one of my passions, and that is reflected in my eagerness to do public speaking.</h4>
+    <h3>I am eager to inspire others and to do public speaking</h3>
 
     <div class="section__content row">
       {% for item in site.data.speaking %}
