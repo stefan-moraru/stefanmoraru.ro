@@ -103,9 +103,11 @@ layout: default
 
     <div class="section__content">
       {% for company in site.data.companies %}
-        <a href="{{ company.href }}" target="_blank">
-          <img src="{{ company.image }}" style="height: {{ company.height }}px;" />
-        </a>
+      <div class="companies__company">
+        <img src="{{ company.image }}" style="height: {{ company.height }}px;" />
+        <h4 class="u-m-0">{{ company.position }}</h4>
+        <h5>{{ company.start }} - {{ company.end }} ({{ company.duration }})</h5>
+      </div>
       {% endfor %}
     </div>
   </section>
@@ -128,6 +130,19 @@ layout: default
       {% endfor %}
 
       <div class="clearfix"></div>
+    </div>
+  </section>
+
+  <section>
+    <h3 style="margin-bottom: 15px;">Recommandations</h3>
+
+    <div class="section__content">
+      {% for recommendation in site.data.recommendations %}
+      <div>
+        <h4 class="u-m-0">{{ recommendation.author }}, {{ recommendation.position }}</h4>
+        <h5>{{ recommendation.content }}
+      </div>
+      {% endfor %}
     </div>
   </section>
 

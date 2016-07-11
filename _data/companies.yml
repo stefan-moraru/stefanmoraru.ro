@@ -1,11 +1,23 @@
 - image: assets/companies-appsbroker.png
   height: 50
   href: http://www.appsbroker.com/
-
-- image: assets/companies-movial.png
-  height: 30
-  href: http://www.movial.com/
+  position: Front end developer
+  start: September 2015
+  end: Present
+  duration: 11 months
 
 - image: assets/companies-thinslices.png
   height: 50
   href: http://www.thinslices.com/
+  position: Full stack intern
+  start: July 2013
+  end: June 2015
+  duration: 2 years
+
+- image: assets/companies-movial.png
+  height: 30
+  href: http://www.movial.com/
+  position: Android intern
+  start: December 2011
+  end: March 2012
+  duration: 4 months

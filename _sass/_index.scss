@@ -1,5 +1,9 @@
 .home {
 
+  .u-m-0 {
+    margin: 0px;
+  }
+
   section {
     .section__title {
       //font-weight: 400;
@@ -28,6 +32,14 @@
   .companies {
     .section__content {
       margin-top: 20px;
+    }
+
+    &__company {
+      margin-bottom: 20px;
+
+      h4 {
+        margin-top: 10px;
+      }
     }
 
     a:hover {
