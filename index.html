@@ -34,7 +34,7 @@ layout: default
   </section>
 
   <section>
-    <h3 class="section__title">Moments when my talent shined</h3>
+    <h3 class="section__title">Putting my knowledge to good use</h3>
 
     <div class="section__content row">
       {% for item in site.data.achievements %}
@@ -134,12 +134,12 @@ layout: default
   </section>
 
   <section>
-    <h3 style="margin-bottom: 15px;">Recommandations</h3>
+    <h3 style="margin-bottom: 15px;">Received feedback</h3>
 
     <div class="section__content">
       {% for recommendation in site.data.recommendations %}
       <div>
-        <h4 class="u-m-0">{{ recommendation.author }}, {{ recommendation.position }}</h4>
+        <h4 class="u-m-0 semi-bold">{{ recommendation.author }}, {{ recommendation.position }}</h4>
         <h5>{{ recommendation.content }}
       </div>
       {% endfor %}

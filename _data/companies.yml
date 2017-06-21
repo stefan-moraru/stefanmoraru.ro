@@ -1,10 +1,18 @@
+- image: assets/companies-particle.png
+  height: 50
+  href: http://www.particle.io
+  position: Front end Engineer
+  start: September 2016
+  end: Present
+  duration: 9 months
+
 - image: assets/companies-appsbroker.png
   height: 50
   href: http://www.appsbroker.com/
   position: Front end developer
-  start: September 2015
-  end: Present
-  duration: 11 months
+  start: August 2015
+  end: September 2016
+  duration: 1 year 2 months
 
 - image: assets/companies-thinslices.png
   height: 50

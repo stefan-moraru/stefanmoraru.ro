@@ -1,8 +1,26 @@
+- name: IT Marathon Web 2017
+  contest: IT Marathon Web
+  date: 07-05-2017
+  place: 1
+  description: A website for helping the community by turning advertising into charitable donations
+
+- name: FIICode
+  contest: FIICode
+  date: 06-05-2017
+  place: 2
+  description: A conversational bot platform for recommendations
+
+- name: IT Marathon Desktop 2017
+  contest: IT Marathon Desktop
+  date: 05-05-2017
+  place: 1
+  description: Real-time image generator based on natural language
+
 - name: Won IT Marathon
   contest: IT Marathon
   date: 22-05-2016
   place: 1
-  description: Created a real time ecosystem simulator. Event driven, it could handle large scales of data.
+  description: Created a real-time ecosystem simulator. Event driven, it could handle large scales of data.
 
 - name: FIICode
   contest: FIICode
