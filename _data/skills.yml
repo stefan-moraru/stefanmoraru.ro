@@ -1,5 +1,5 @@
 - name: Front end
-  skills: [ Javascript, "React, Flux", Angular, SASS/LESS, "Gulp, Grunt, Webpack, Karma, Jasmine" ]
+  skills: [ JavaScript, "React, Flux, Redux", Angular, SASS/LESS, "Webpack, Gulp, Grunt, Karma, Jasmine" ]
 
 - name: Back end
   skills: [ NodeJS, Sails, PHP, Symfony ]

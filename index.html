@@ -106,7 +106,8 @@ layout: default
       <div class="companies__company">
         <img src="{{ company.image }}" style="height: {{ company.height }}px;" />
         <h4 class="u-m-0">{{ company.position }}</h4>
-        <h5>{{ company.start }} - {{ company.end }} ({{ company.duration }})</h5>
+        <h5 class="companies__company__date">{{ company.start }} - {{ company.end }} ({{ company.duration }})</h5>
+        <h5 class="companies__company__link"><a href="{{ company.href }}" target="_blank">{{ company.href }}</a></h5>
       </div>
       {% endfor %}
     </div>

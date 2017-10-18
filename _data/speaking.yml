@@ -2,9 +2,10 @@
   date: 22-05-2016
   description: Delivered a talk about a platform I developed for making volunteering more accesible.
   image: assets/speaking-tedxiasi.png
-  imageHeight: 34
+  imageHeight: 29
 
 - name: CodeCamp Iasi
   date: 22-05-2016
   description: '"Hackathon your work" was a presentation about applying hackathon concepts to daily work. It aimed at providing an approach that would improve our working efficency.'
   image: assets/speaking-codecamp.png
+  imageHeight: 25
